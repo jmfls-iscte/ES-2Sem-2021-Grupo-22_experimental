@@ -20,7 +20,7 @@ public class Package {
 	}
 	
 	public String getName_Package() {
-		return "";
+		return name;
 	}
 	
 	public List<Class> getClass_list(){
