@@ -9,14 +9,15 @@ public class Class {
 	
 	private String name;
 	private ArrayList<Method> arrayMethods;
-	private HashMap<String, Integer> hashMetricas;
+	private int NOM_class;
+	private int LOC_class;
+	private int WMC_class;
 	boolean is_God_class;
 	
 	
 	public Class()
 	{
 		arrayMethods = new ArrayList<Method>();
-		hashMetricas = new HashMap<String, Integer>();
 		//Adicionar as métricas já conhecidas
 	}
 	
@@ -24,7 +25,6 @@ public class Class {
 	{
 		this.name = name;
 		arrayMethods = new ArrayList<Method>();
-		hashMetricas = new HashMap<String, Integer>();
 		//Adicionar as métricas já conhecidas
 	}
 	
@@ -37,15 +37,15 @@ public class Class {
 	} 
 	
 	public int getNOM_class() {
-		return hashMetricas.get("NOM_class");
+		return this.NOM_class;
 	}
 	
 	public int getLOC_class() {
-		return  hashMetricas.get("LOC_class");
+		return  this.LOC_class;
 	}
 	
 	public int getWMC_class() {
-		 return hashMetricas.get("WMC_class");
+		 return this.WMC_class;
 	}
 	
 	public boolean getis_God_class() {
@@ -70,33 +70,8 @@ public class Class {
 		return false;
 	}
 	
+
 	
-	public void setMetrica(String name, int value)
-	{
-		if(!verifyExistsMetric(name))
-		{
-			addMetric(name, value);
-		}
-		else
-		{
-			hashMetricas.replace(name, value);
-		}
-	}
 	
-	private boolean verifyExistsMetric(String metricToVerify)
-	{
-		
-		return hashMetricas.containsKey(metricToVerify);
-	}
-	
-	public void addMetric(String name)
-	{
-		hashMetricas.put(name, 0);
-	}
-	
-	public void addMetric(String name, int value)
-	{
-		hashMetricas.put(name, value);
-	}
 
 }
