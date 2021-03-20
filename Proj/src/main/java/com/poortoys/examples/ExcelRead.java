@@ -107,9 +107,8 @@ public class ExcelRead {
 								currentPackage = new Package(package_name);
 								packages.add(currentPackage);
 							}
-
-							// currentCell.getStringCellValue()
 							break;
+							
 						case 2:
 							// criar ou verificar se existe classe com o nome atual da célula
 							String class_name = currentCell.getStringCellValue();
@@ -118,12 +117,17 @@ public class ExcelRead {
 								currentClass = new Class(class_name);
 								currentPackage.addClass(currentClass);
 							}
-
-							// currentCell.getStringCellValue()
 							break;
+							
 						case 3:
 							// criar ou verificar se existe metodo com o nome atual da célula
-							// currentCell.getStringCellValue()
+							
+							String method_name = currentCell.getStringCellValue();
+							currentMethod = currentClass.get_MethodByName(method_name);
+							if (currentMethod == null) {
+								currentMethod = new Method(method_name);
+								currentClass.addMethod(currentMethod);
+							}
 							break;
 
 						default:
