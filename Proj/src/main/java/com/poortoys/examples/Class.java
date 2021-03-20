@@ -53,7 +53,12 @@ public class Class {
 		return null;
 	}
 	
-	
+	public ArrayList<String> get_name_code_Smells()
+	{
+		ArrayList<String> keys =  new ArrayList<String>();
+		keys.addAll(code_Smells.keySet());
+		return keys;
+	}
 	
 	
 	
@@ -67,6 +72,18 @@ public class Class {
 	
 	public int getWMC_class() {
 		 return this.WMC_class;
+	}
+	
+	
+	public void setNOM_class(int NOM_class) {
+		this.NOM_class =NOM_class;
+	}
+	
+	public void setLOC_class(int LOC_class) {
+		this.LOC_class =LOC_class;
+	}
+	public void setWMC_class(int WMC_class) {
+		this.WMC_class =WMC_class;
 	}
 	
 	

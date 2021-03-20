@@ -25,6 +25,9 @@ public class ExcelRead {
 	private Package currentPackage;
 	private Class currentClass;
 	private Method currentMethod;
+	
+	private ArrayList<String> codeSmells_Class;
+	private ArrayList<String> codeSmells_Method;
 
 	private int currentCellInt;
 
@@ -35,6 +38,9 @@ public class ExcelRead {
 		currentCellInt = 0;
 		cells = new ArrayList<String>();
 		packages = new ArrayList<Package>();
+		
+		codeSmells_Class = new Class().get_name_code_Smells();
+		codeSmells_Method = new Method().get_name_code_Smells();
 
 		System.out.println("Insira o caminho do ficheiro: ");
 		path = scanner.nextLine();
@@ -47,6 +53,8 @@ public class ExcelRead {
 		currentCellInt = 0;
 		cells = new ArrayList<String>();
 		packages = new ArrayList<Package>();
+		codeSmells_Class = new Class().get_name_code_Smells();
+		codeSmells_Method = new Method().get_name_code_Smells();
 	}
 
 	public void ReadFile() {
@@ -93,7 +101,7 @@ public class ExcelRead {
 					if (n_reads != 0) {
 						switch (currentCellInt) {
 						case 0:
-
+								//Method id é para ignorar?
 							break;
 						case 1:
 							// criar ou verificar se existe package com o nome atual da célula
@@ -137,6 +145,37 @@ public class ExcelRead {
 							 * 
 							 * Entrar no package Entrar na classe Entrar no metodo inserir metrica + valor
 							 */
+							
+							String var = cells.get(currentCellInt);
+							switch (var) {
+							case "NOM_class":
+									if(currentClass.getNOM_class()==0)
+										currentClass.setNOM_class((int)currentCell.getNumericCellValue());
+								break;
+							case "LOC_class":
+								if(currentClass.getLOC_class()==0)
+									currentClass.setLOC_class((int)currentCell.getNumericCellValue());
+								break;
+							case "WMC_class":
+								if(currentClass.getWMC_class()==0)
+									currentClass.setWMC_class((int)currentCell.getNumericCellValue());
+								break;
+							case "LOC_method":
+								if(currentMethod.getLOC_method()==0)
+									currentMethod.setLOC_method((int)currentCell.getNumericCellValue());
+								break;
+							case "CYCLO_method":
+								if(currentMethod.getCYCLO_method()==0)
+									currentMethod.setCYCLO_method((int)currentCell.getNumericCellValue());
+								break;
+
+							default:
+								break;
+							}
+							
+							
+							
+							
 
 							break;
 						}
