@@ -2,12 +2,20 @@ package com.poortoys.examples;
 
 public class Method {
 	
+	
+	
+	private String name;
+	
+	public Method(String method_name) {
+		this.name = method_name;
+	}
+
 	public int getMethodID() {
 		return 0;
 	}
 	
 	public String getName_method() {
-		return "";
+		return name;
 	}
 	
 	public int getLOC_method() {

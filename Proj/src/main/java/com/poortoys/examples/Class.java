@@ -36,6 +36,18 @@ public class Class {
 		return arrayMethods;
 	} 
 	
+	public Method get_MethodByName(String methodname)
+	{
+		for(Method m:arrayMethods)
+		{
+			if(m.getName_method()==methodname)
+				return m;
+		}
+		
+		return null;
+	}
+	
+	
 	public int getNOM_class() {
 		return this.NOM_class;
 	}

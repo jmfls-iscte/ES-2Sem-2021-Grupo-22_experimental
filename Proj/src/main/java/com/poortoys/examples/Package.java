@@ -27,6 +27,17 @@ public class Package {
 		return arrayClasses;
 	}
 	
+	public Class get_ClassByName(String Classname)
+	{
+		for(Class c:arrayClasses)
+		{
+			if(c.getName_Class()==Classname)
+				return c;
+		}
+		
+		return null;
+	}
+	
 	public void setName_Package(String name)
 	{
 		this.name=name;
