@@ -5,6 +5,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.SWT;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 public class Gui_detecaoCS {
 
@@ -48,7 +49,8 @@ public class Gui_detecaoCS {
 		shell.setLayout(new GridLayout(1, false));
 		
 		Label lblDeteoDeCode = new Label(shell, SWT.NONE);
-		lblDeteoDeCode.setText("Deteção de Code Smells");
+		lblDeteoDeCode.setFont(SWTResourceManager.getFont("Segoe UI", 13, SWT.NORMAL));
+		lblDeteoDeCode.setText("Dete\u00E7ao de Code Smells");
 
 	}
 
