@@ -61,7 +61,7 @@ public class MainGui {
 		gd_extracao_btn.widthHint = 230;
 		extracao_btn.setLayoutData(gd_extracao_btn);
 		extracao_btn.setFont(SWTResourceManager.getFont("Segoe UI", 13, SWT.NORMAL));
-		extracao_btn.setText("Extração Métricas");
+		extracao_btn.setText("Extra\u00E7\u00E3o de M\u00E9tricas");
 		new Label(shell, SWT.NONE);
 		
 		Button EditorDeRegras_btn = new Button(shell, SWT.NONE);
@@ -89,7 +89,7 @@ public class MainGui {
 		Button DeteoDeCode_btn = new Button(shell, SWT.NONE);
 		
 		DeteoDeCode_btn.setFont(SWTResourceManager.getFont("Segoe UI", 13, SWT.NORMAL));
-		DeteoDeCode_btn.setText("Deteção de Code Smells");
+		DeteoDeCode_btn.setText("Dete\u00E7\u00E3o de Code Smells");
 		new Label(shell, SWT.NONE);
 		new Label(shell, SWT.NONE);
 		new Label(shell, SWT.NONE);

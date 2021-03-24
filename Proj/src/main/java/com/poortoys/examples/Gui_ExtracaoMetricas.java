@@ -50,7 +50,7 @@ public class Gui_ExtracaoMetricas {
 		
 		Label ExtraoDeMetricas_lbl = new Label(shell, SWT.NONE);
 		ExtraoDeMetricas_lbl.setFont(SWTResourceManager.getFont("Segoe UI", 13, SWT.NORMAL));
-		ExtraoDeMetricas_lbl.setText("Extração de Metricas");
+		ExtraoDeMetricas_lbl.setText("Extra\u00E7\u00E3o de Metricas");
 
 	}
 
