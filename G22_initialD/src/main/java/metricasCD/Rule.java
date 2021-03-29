@@ -26,4 +26,10 @@ public class Rule {
 				rule_info.set(id, new_info);
 			}
 		}
+		
+		
+		public String getTipo()
+		{
+			return tipo;
+		}
 }
