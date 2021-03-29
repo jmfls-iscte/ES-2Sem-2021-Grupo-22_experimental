@@ -31,5 +31,6 @@ public class Rule {
 		public String getTipo()
 		{
 			return tipo;
+			
 		}
 }
